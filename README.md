@@ -3,7 +3,7 @@
 ## users table
 | Column         | Type           |Options        |
 | :------------- | :------------- |:------------- |
-| name           | string         |:null: false, unique: true, index: true|
+| name           | string         |:null: false, index: true|
 | e-mail         | string         |:null: false|
 ### Association
 - has_many :messeages
@@ -30,8 +30,8 @@
 | :------------- | :------------- |:------------- |
 | body           | text           |               |
 | image          | string         |               |
-| user_id          | references     |:null: false, foreign_key: true|
-| group_id         | references     |:null: false, foreign_key: true|
+| user           | references     |:null: false, foreign_key: true|
+| group          | references     |:null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
