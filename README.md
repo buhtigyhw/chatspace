@@ -12,7 +12,7 @@
 ## groups table
 | Column         | Type           |Options        |
 | :------------- | :------------- |:------------- |
-| name           | string         |:null: false, unique: true|
+| name           | string         |:null: false|
 ### Association
 - has_many :messeages
 - has_many :group_users
