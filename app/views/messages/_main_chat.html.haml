@@ -1,10 +1,6 @@
-.wrapper
-
-  = render 'shared/side_bar'
-
   .chat
-    .header
-      .left-header
+    .chat__header
+      .chat__header__left-header
         .left-header__title
           グループ名
         %ul.left-header__members
@@ -20,37 +16,37 @@
           .right-header__button
             Edit
     .messages
-      .message
-        .upper-message
-          .upper-message__user-name
+      .messages__message
+        .messages__message__upper-message
+          .messages__message__upper-message__user-name
             メンバー
-          .upper-message__date
+          .messages__message__upper-message__date
             2020/03/10
-        .lower-meesage
-          .lower-message__content
+          .messages__message__lower-meesage
+          .messages__message__lower-message__content
             メッセージ
-      .message
-        .upper-message
-          .upper-message__user-name
+      .messages__message
+        .messages__message__upper-message
+        .messages__message__upper-message__user-name
             メンバー
-          .upper-message__date
+          .messages__message__upper-message__date
             2020/03/02
-        .lower-meesage
-          .lower-message__content
+          .messages__message__lower-meesage
+          .messages__message__lower-message__content
             メッセージ
-      .message
-        .upper-message
-          .upper-message__user-name
+      .messages__message
+         .messages__message__upper-message
+         .messages__messageupper-message__user-name
             メンバー
-          .upper-message__date
+         .messages__messageupper-message__date
             2020/03/12
-        .lower-meesage
-          .lower-message__content
+         .messages__message__lower-meesage
+         .messages__message__lower-message__content
             メッセージ
-    .form
+    .chat__form
       %form
         %input.form__message
-        .form__mask
+     .chat__form__form__mask
           %label.form__mask__image
             =icon('fas','image')
             %input.hidden{type: 'file'}
