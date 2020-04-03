@@ -6,12 +6,13 @@
 
 .chat {
   width: calc(100% - 300px);
-  .header {
+  &__header {
     box-sizing: border-box;
     height: 100px;
     padding: 0 40px;
-    .left-header {
-      float: left;
+    display: flex;
+    justify-content: space-between;
+    &__left-header {
       &__title {
         color: #333;
         font-size: 20px;
@@ -22,25 +23,23 @@
         display: flex;
         font-size: 12px;
         margin-top: 15px;
-        .member {
+        &__member {
           display: inline-block;
           padding-right: 5px;
         }
       }
     }
-    .right-header {
-      .right-header__button {
-        border: 1px solid rgb(28, 28, 36);
-        color: rgb(19, 19, 29);
-        float: right;
+    &__right-header {
+      &__button {
+        display: block;
+        border: 1px solid;
         height: 40px;
-        line-height: 40px;
         margin-top: 28px;
         padding: 0 20px;
-        a :visited {
-          text-decoration:none;
-          color: rgb(19, 19, 29);
-        }
+        line-height: 40px;
+        font-size: 16px;
+        color: #38aef0;
+        text-decoration: none;
       }
     }
   }
@@ -51,8 +50,8 @@
     padding: 46px 40px 0;
     height: calc(100vh - 100px - 90px);
     overflow: auto;
-    .message {
-      .upper-message {
+    &__message {
+      &__upper-message {
         display: flex;
         &__user-name {
           color: #434a54;
@@ -65,7 +64,7 @@
           padding-left: 10px;
         }
       }
-      .lower-message {
+      &__lower-message {
         margin-top: 10px;
         &__content {
           color: #434a54;
@@ -76,7 +75,7 @@
     }
   }
 
-  .form {
+  .chat__form {
     background-color: #DDDDDD;
     box-sizing: border-box;
     height: 90px;
@@ -86,20 +85,18 @@
       float: left;
       height: 50px;
       width: calc(100% - 150px);
-    }
-    &__mask {
-      background-color: white;
-      float: left;
-      height: 50px;
-      padding-right: 10px;
-      &__image {
-        font-size: 20px;
-        line-height: 50px;
-      }
-      .hidden {
-        display: none;
-      }
-    }
+      &__mask {
+        background-color: white;
+        float: left;
+        height: 50px;
+        padding: 10px 10px 0 10px;
+        &__image {
+          font-size: 20px;
+          line-height: 50px;
+          display: none;
+        }
+     }
+   }
     &__submit {
       background-color: rgb(12, 12, 14);
       border: none;
@@ -107,7 +104,6 @@
       float: right;
       font-size: 16px;
       height: 50px;
-      margin-left: 15px;
       padding: 0 30px;
     }
   }
