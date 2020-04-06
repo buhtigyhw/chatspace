@@ -37,18 +37,4 @@ test:
 # for a full rundown on how to provide these environment variables in a
 # production deployment.
 #
-# On Heroku and other platform providers, you may have a full connection URL
-# available as an environment variable. For example:
-#
-#   DATABASE_URL="mysql2://myuser:mypass@localhost/somedatabase"
-#
-# You can use this database configuration with:
-#
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
-production:
-  <<: *default
-  database: chat-space_production
-  username: chat-space
-  password: <%= ENV['CHAT-SPACE_DATABASE_PASSWORD'] %>
+# On H

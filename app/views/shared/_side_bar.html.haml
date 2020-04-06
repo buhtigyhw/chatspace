@@ -1,12 +1,13 @@
 .side-bar
   .side-bar__box
     .side-bar__box__name
+      = current_user.name
       ユーザーネーム
     .side-bar__box__lists
       = link_to "#",class: "side-bar__box__lists__icon" do
         =icon('fas','edit')
       = link_to "#",class: "side-bar__box__lists__icon" do
-        =icon('fas','cog')
+        =icon('fas','cog',class: 'icon')
   .groups
     .group
       .group__name
@@ -23,5 +24,4 @@
         グループ名
       .group__message
         新着メッセージ
-      
 
