@@ -42,18 +42,13 @@ $(function(){
       $('.messages').animate({
         scrollTop: $('.messages')[0].scrollHeight
       }, 10);
-      $("#new_message")[0].reset();
     })
     .fail(function(){
       alert("メッセージ送信に失敗しました");
     })
     .always(function(){
       $('.chat__form__submit').prop('disabled', false);
+      $("#new_message")[0].reset();
     })
-
-
-  
   });
-
-  
 });
