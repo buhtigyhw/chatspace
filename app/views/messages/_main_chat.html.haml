@@ -6,7 +6,8 @@
       %ul.chat__header__left-header__members
         Member：
         %li.chat__header__left-header__members__member
-          メンバー名
+          - @group.users.each do |user|
+            = user.name
     .chat__header__right-header
       = link_to "edit", edit_group_path(@group),class:"chat__header__right-header__button"
   .messages
