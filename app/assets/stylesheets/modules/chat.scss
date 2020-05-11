@@ -51,6 +51,7 @@
     height: calc(100vh - 100px - 90px);
     overflow: auto;
     &__message {
+      margin-bottom: 30px;
       &__upper-message {
         display: flex;
         &__user-name {
