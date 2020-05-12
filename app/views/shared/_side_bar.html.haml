@@ -2,19 +2,17 @@
   .side-bar__box
     .side-bar__box__name
       = current_user.name
-      ユーザーネーム
     .side-bar__box__lists
       = link_to new_group_path,class: "side-bar__box__lists__icon" do
         =icon('fas','edit')
       = link_to edit_user_path(current_user),class: "side-bar__box__lists__icon" do
         =icon('fas','cog',class: 'icon')
   .groups
-    .group
-      - current_user.groups.each do |group|
-        .group__name
-          = link_to group_messages_path(group) do
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          .group__name
             = group.name
-        .group__message
-          = group.show_last_message
-      
+          .group__message
+            = group.show_last_message
 

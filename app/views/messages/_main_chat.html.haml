@@ -15,7 +15,7 @@
    
   .chat__form
     = form_for [@group, @message] do |f|
-      = f.text_field :content, class: "chat__form__message"
+      = f.text_field :content, class: "chat__form__message", placeholder: "type a message"
       = f.label :image ,class: "chat__form__message__mask" do
         = icon('fas','image')
         = f.file_field :image, class:"chat__form__message__mask__image"
